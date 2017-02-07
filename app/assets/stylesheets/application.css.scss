@@ -18,6 +18,11 @@
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
  
+
+
+
+
+
 /* NAV BAR */
 .navbar {
   background: #5f2c82; /* fallback for old browsers */
@@ -29,6 +34,7 @@
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
   color: #fff;
+  font-size: 1.5em;
   &:hover {
     color: #fff;
     opacity: 0.75;
@@ -38,6 +44,7 @@
 .navbar-brand {
   font-size: 2em;
 }
+
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
