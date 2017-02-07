@@ -4,4 +4,7 @@ class PagesController < ApplicationController
   
   def vendors
   end
+  
+  def info
+  end
 end

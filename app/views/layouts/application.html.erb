@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myapp</title>
+    <title>My Evolution Travel</title>
     <%= csrf_meta_tags %>
-
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no, maximum-scale=1.0">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -27,6 +28,7 @@
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Vendors", vendors_path %></li>
+            <li><%= link_to "Info", info_path %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
