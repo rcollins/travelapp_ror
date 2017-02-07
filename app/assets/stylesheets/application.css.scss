@@ -18,9 +18,23 @@
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
  
- 
- 
 /* NAV BAR */
+.navbar {
+  background: #5f2c82; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #5f2c82 , #49a09d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #5f2c82 , #49a09d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+  &:hover {
+    color: #fff;
+    opacity: 0.75;
+  }
+}
+ 
 .navbar-brand {
   font-size: 2em;
 }
@@ -31,7 +45,7 @@
 .navbar-default .navbar-toggle {
   border: 2px solid white;
     &:hover, &:focus {
-    background-color: #00c6ff;
+    background-color: #49a09d;
   }
 }
  
