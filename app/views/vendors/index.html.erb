@@ -1,0 +1,31 @@
+<h1>Vendors</h1>
+
+<table>
+  <tr>
+    <th>Vendor Name</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th>MemberID</th>
+    <th>Site</th>
+    <th>Notes</th>
+  </tr>
+
+<% for vendor in @vendors %>
+  <tr>
+    <td><%=h vendor.vendor_name %></td>
+    <td><%=h vendor.username %></td>
+    <td><%=h vendor.password %></td>
+    <td><%= vendor.memberID %></td>
+    <td><%= vendor.vendor_url %></td>
+    <td><%= vendor.notes %></td>
+    <td><%= link_to 'Show', vendor %></td>
+    <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?',
+            :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vendor', new_vendor_path %>
