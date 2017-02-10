@@ -27,6 +27,14 @@ class VendorsController < ApplicationController
     @vendor = Vendor.find params[:id]
   end
   
+  def update
+    @vendor = Vendor.find params[:id]
+    if @vendor.update_attributes(vendor_params)
+    else
+      redirect_to vendor_path
+    end
+  end
+  
   private
     def vendor_params
       params.require(:vendor).permit(:vendor_name, :username, :password, :memberID, :vendor_url, :notes)

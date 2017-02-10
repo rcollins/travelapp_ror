@@ -1,12 +1,36 @@
 <h2><%= @vendor.vendor_name %></h2>
 
-<ul class="show">
-    <li><span class="title">Username: </span><%= @vendor.username  %></li>
-    <li><span class="title">Password: </span><%= @vendor.password  %></li>
-    <li><span class="title">Member ID: </span><%= @vendor.memberID  %></li>
-    <li><%= @vendor.vendor_url  %></li>
-    <li><span class="title">Notes: </span><%= @vendor.notes  %></li>
-</ul>
+<!--<ul class="show">-->
+<!--  <li><span class="title">Username: </span><%= @vendor.username  %></li>-->
+<!--  <li><span class="title">Password: </span><%= @vendor.password  %></li>-->
+<!--  <li><span class="title">Member ID: </span><%= @vendor.memberID  %></li>-->
+<!--  <li><%= @vendor.vendor_url  %></li>-->
+<!--  <li><span class="title">Notes: </span><%= @vendor.notes  %></li>-->
+<!--</ul>-->
 
-<%= link_to 'Edit', :action => 'edit', :id => @vendor.id %> |
-<%= link_to 'Back', :action => nil %>
+<table>
+  <tr>
+    <td class="title">Username</td>
+    <td><%= @vendor.username %></td>
+  </tr>
+  <tr>
+    <td class="title">Password</td>
+    <td><%= @vendor.password %></td>
+  </tr>
+  <tr>
+    <td class="title">Member ID</td>
+    <td><%= @vendor.memberID %></td>
+  </tr>
+  <tr>
+    <td class="title">Site</td>
+    <td><%= @vendor.vendor_url %></td>
+  </tr>
+  <tr>
+    <td class="title">Notes</td>
+    <td><%= @vendor.notes %></td>
+  </tr>
+    
+</table>
+
+<button class="btn btn-default"><%= link_to 'Edit', :action => 'edit', :id => @vendor.id %></button> |
+<button class="btn btn-default"><%= link_to 'Back', :action => nil %></button>
