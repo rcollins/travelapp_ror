@@ -23,6 +23,10 @@ class VendorsController < ApplicationController
     @vendor = Vendor.find(params[:id])
   end
   
+  def edit
+    @vendor = Vendor.find params[:id]
+  end
+  
   private
     def vendor_params
       params.require(:vendor).permit(:vendor_name, :username, :password, :memberID, :vendor_url, :notes)

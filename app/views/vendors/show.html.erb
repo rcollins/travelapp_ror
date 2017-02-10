@@ -1,0 +1,12 @@
+<h2><%= @vendor.vendor_name %></h2>
+
+<ul class="show">
+    <li><span class="title">Username: </span><%= @vendor.username  %></li>
+    <li><span class="title">Password: </span><%= @vendor.password  %></li>
+    <li><span class="title">Member ID: </span><%= @vendor.memberID  %></li>
+    <li><%= @vendor.vendor_url  %></li>
+    <li><span class="title">Notes: </span><%= @vendor.notes  %></li>
+</ul>
+
+<%= link_to 'Edit', :action => 'edit', :id => @vendor.id %> |
+<%= link_to 'Back', :action => nil %>
