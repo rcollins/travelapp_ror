@@ -1,5 +1,6 @@
 class VendorsController < ApplicationController
   
+  
   # GET request to /vendors
   # Show new vendor form
   def new
@@ -24,15 +25,26 @@ class VendorsController < ApplicationController
   end
   
   def edit
-    @vendor = Vendor.find params[:id]
+    @vendors = Vendor.find params[:id]
   end
   
   def update
     @vendor = Vendor.find params[:id]
     if @vendor.update_attributes(vendor_params)
-    else
-      redirect_to vendor_path
+      redirect_to :action => 'show', :id => @vendor.id
     end
+  end
+  
+  #def delete
+  #  Vendor.find params[:id].destroy
+  #  redirect_to :action => 'list'
+  #end
+  
+  def destroy
+    @vendor = Vendor.find(params[:id])
+    @vendor.destroy
+  
+    redirect_to vendors_path, notice: "Delete success"
   end
   
   private
